@@ -1,0 +1,344 @@
+:root {
+    --background: #ffffff;
+    --text: #111111;
+    --accent: #333333;
+    --border: #e0e0e0;
+    --hover: #f5f5f5;
+    --button: #000000;
+    --button-text: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #012cee;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0069f3;
+}
+
+
+
+body {
+    cursor: url('icons8-base-cursor-32.png'), auto;
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.steam-img img {
+    border: 3px solid #000; 
+    padding: 5px; 
+    border-radius: 8px; 
+    margin: 5px; 
+    transition: transform 0.3s ease; 
+}
+
+.steam-img img:hover {
+    transform: scale(1.05); 
+}
+
+.steam-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.steam-img img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.steam-img img:hover {
+    transform: scale(1.1);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+  
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--background);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 1px solid var(--border);
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+  
+p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--hover);
+    border-left: 3px solid var(--accent);
+}
+
+.container strong {
+    border: solid 2px black;
+    padding: 3px;
+    border-radius: 20px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+}
+  
+input[type="number"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s ease;
+    background-color: var(--background);
+    color: var(--text);
+}
+  
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+  
+button {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: var(--button);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    margin-top: 16px;
+}
+  
+button:hover {
+    opacity: 0.9;
+}
+  
+button:active {
+    transform: scale(0.98);
+}
+  
+#result {
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 16px;
+    background-color: var(--hover);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.exchange-rates {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--hover);
+    border-left: 3px solid var(--accent);
+}
+  
+.radio-option {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    margin-bottom: 8px;
+}
+  
+.radio-option:last-child {
+    margin-bottom: 0;
+}
+  
+.radio-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+  
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+    margin-top: 3px;
+    accent-color: var(--accent);
+}
+  
+.radio-option label {
+    margin-bottom: 0;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+
+.exchange-rates {
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+
+.radio-option label {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.radio-option label:hover {
+    background-color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+
+.radio-option input[type="radio"]:checked + label {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+
+.radio-option label i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+  
+@media (max-width: 600px) {
+    .container {
+        padding: 24px;
+        border-radius: 12px;
+    }
+  
+    h1 {
+        font-size: 24px;
+    }
+  
+    p,
+    label,
+    input,
+    button {
+        font-size: 15px;
+    }
+  
+    .radio-option {
+        padding: 8px;
+    }
+
+    .steam-img img {
+        height: 40px;
+    }
+
+    .steam-img::after {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadorita</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="steam.jpeg" type="steam-img">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+      <div class="steam-img">
+        <img src="steam.jpeg" alt="steam-logo">
+        <h1>x</h1>
+        <img src="Argentina.png" alt="Argentina">
+      </div>
+    </header>
+    <div class="container">
+        <h1><i class="fas fa-calculator"></i> Calculadorita</h1>
+
+        <p>calcula cuanto te saldra tu juego<strong>favorito</strong> en la plataforma de <strong>steam</strong></p>
+        
+        <div class="exchange-rates">
+            <div class="radio-option">
+                <input type="radio" id="belo" name="exchange" value="belo" checked>
+                <label for="belo">🪙 Dólar Belo USDC/ARS: 1.227,07 ARS</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="oficial1" name="exchange" value="oficial1">
+                <label for="oficial1">💵 Dólar Oficial + IVA 21%: 1.439,90 ARS</label>
+            </div>
+        </div>
+        
+        <label for="price">Precio en dólares (Steam):</label>
+        <input type="number" id="price" placeholder="Ingresa el precio">
+        
+        <button onclick="convertPrice()">Convertir</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
